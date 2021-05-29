@@ -1,0 +1,85 @@
+@font-face {
+  font-family: "Gerstner";
+  src: url(./GerstnerProgramm-Regular.woff2) format("woff2");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Gerstner";
+  font-weight: 100;
+  color: #e3e3e3;
+}
+
+:root {
+  --app-height: 100%;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100vh;
+  height: var(--app-height);
+  overscroll-behavior: none;
+  background-color: #121212;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  z-index: 2;
+  pointer-events: none;
+  padding-left: 2%;
+}
+
+h1 {
+  font-size: 15px;
+}
+
+main {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: 0.5s;
+}
+
+section {
+  position: relative;
+  height: var(--app-height);
+  width: 100%;
+  overflow: hidden;
+  /* border: 1px solid rgb(255, 255, 255); */
+}
+
+.img {
+  position: absolute;
+  left: 20%;
+  top: 20%;
+  width: 60%;
+  height: 60%;
+  background-size: cover;
+  background-position: center;
+  transform: scale(1);
+  transition: 0.5s;
+  filter: grayscale(50%);
+}
+
+.img.active {
+  transform: scale(1.7);
+}
